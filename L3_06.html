@@ -42,7 +42,11 @@
 
         form.onsubmit = function (event) {
             event.preventDefault(); // 阻止表單的預設行為
-            console.log("QQ");
+            console.log(inputs[0].value);
+            console.log(inputs[1].value);
+            if (inputs[0].value == "") {
+                alert("名字沒有寫");
+            }
 
         }
 
