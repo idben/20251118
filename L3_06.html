@@ -40,8 +40,10 @@
         console.log(form);
         let inputs = document.getElementsByTagName("input");
 
+        // 注意表單的驗證要先阻止表單送出,
+        // 這個行為是在表單中, 不是在按鈕裡
         form.onsubmit = function (event) {
-            event.preventDefault(); // 阻止表單的預設行為
+            event.preventDefault(); // 阻止表單的預設行為, 也就是送出
             console.log(inputs[0].value);
             console.log(inputs[1].value);
             if (inputs[0].value == "") {
@@ -52,7 +54,7 @@
                 alert("姓氏沒有寫");
                 return;
             }
-            form.submit();
+            form.submit(); // 驗證都過後, 表單送出
         }
 
     </script>
