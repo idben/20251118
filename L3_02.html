@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementById()</title>
+</head>
+
+<body>
+    <div id="aaa">
+        <div id="bbb">
+            <div id="ccc">123</div>
+        </div>
+    </div>
+
+    <script>
+        // let aaa = document.getElementById("aaa");
+        // let bbb = document.getElementById("bbb");
+        // let ccc = document.getElementById("ccc");
+        // 有 id 的元素, 不需要經過抓取, 可以直接用 id 控制
+
+        // 有經過抓取, 會有相對應的程式碼片段可以使用
+        aaa.style.backgroundColor = "pink";
+        bbb.style.color = "red";
+        ccc.innerHTML = "abc";
+
+    </script>
+</body>
+
+</html>
