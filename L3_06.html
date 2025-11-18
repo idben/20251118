@@ -46,8 +46,13 @@
             console.log(inputs[1].value);
             if (inputs[0].value == "") {
                 alert("名字沒有寫");
+                return; // js 裡終止程式在這一行
             }
-
+            if (inputs[1].value == "") {
+                alert("姓氏沒有寫");
+                return;
+            }
+            form.submit();
         }
 
     </script>
