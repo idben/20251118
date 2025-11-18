@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .name1,
+        .name2 {
+            color: #ea0d0d;
+        }
+
+        .name1 .name2 {
+            font-size: 30px;
+        }
+
+        .name1>.name2 {
+            font-weight: bold;
+        }
+
+        .name1.name2 {
+            color: #31dd06;
+        }
+    </style>
+    <title>選擇器復習</title>
+</head>
+
+<body>
+    <!-- .name1>{name1} -->
+    <!-- .name$*5>{name$} -->
+    <div class="name1">
+        name1
+        <div class="name1">name1</div>
+        <div class="name2">name2</div>
+        <div class="name3">
+            name3
+            <div class="name1">name1</div>
+            <div class="name2">name2</div>
+            <div class="name3">name3</div>
+        </div>
+    </div>
+    <div class="name2">name2</div>
+    <div class="name3">name3</div>
+    <div class="name4">name4</div>
+    <div class="name5">name5</div>
+    <div class="name1 name2">name1</div>
+    <div class="name2">name2</div>
+    <div class="name3">name3</div>
+    <div class="name4">name4</div>
+    <div class="name5">name5</div>
+
+    <script>
+        // HTML元素必定等於節點(node)
+        // 節點(node)不一定是HTML元素
+        // 換行是一個節點, 但並沒有相對的換行元素
+        // 純文字是一個節點, 但並沒有相對的純文字元素
+        // 至於要用節點還是元素, 要看你選擇後要做什麼而定
+        // 節點可以新增, 插入, 刪除
+        // 元素可以修改文字和html內容
+        console.log(document.querySelectorAll(".name1, .name2"));
+        console.log(document.querySelectorAll(".name1 .name2"));
+        console.log(document.querySelectorAll(".name1>.name2"));
+        console.log(document.querySelectorAll(".name1.name2"));
+        console.log(document.querySelector(".name1.name2"));
+        console.log(document.querySelector(".name1, .name2"));
+
+    </script>
+</body>
+
+</html>
