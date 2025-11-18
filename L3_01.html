@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementById()</title>
+</head>
+
+<body>
+    <div id="aaa">
+        <div id="bbb">
+            <div id="ccc">123</div>
+        </div>
+    </div>
+
+    <script>
+        let aaa = document.getElementById("aaa");
+        console.log(aaa);
+        let bbb = document.getElementById("bbb");
+        console.log(bbb);
+        let ccc = document.getElementById("ccc");
+        console.log(ccc);
+
+        aaa.style.backgroundColor = "pink";
+        // 使用 bbb 把文字改成紅色
+        bbb.style.color = "red";
+        // 使用 ccc 把文字內容改成 "abc"
+        ccc.innerHTML = "abc";
+    </script>
+</body>
+
+</html>
