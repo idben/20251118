@@ -46,7 +46,7 @@
             event.preventDefault(); // 阻止表單的預設行為, 也就是送出
             console.log(inputs[0].value);
             console.log(inputs[1].value);
-            if (inputs[0].value == "") {
+            if (inputs[0].value == "") { // input 沒有填是使用 value="" 所以 value 值不是 null 哦
                 alert("名字沒有寫");
                 return; // js 裡終止程式在這一行
             }
