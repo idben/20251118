@@ -4,6 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        input[type=text] {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        form div:nth-child(3) {
+            display: flex;
+            justify-content: right;
+        }
+    </style>
     <title>簡單的表單驗證</title>
 </head>
 
@@ -16,9 +27,26 @@
             <input type="text" name="name2" placeholder="姓">
         </div>
         <div>
+            <!-- <button type="button">送出</button> -->
+            <button type="reset">重置</button>
             <button>送出</button>
         </div>
     </form>
+
+    <script>
+        let btnSend = document.getElementsByTagName("button")[1];
+        console.log(btnSend);
+        let form = document.getElementsByTagName("form")[0];
+        console.log(form);
+        let inputs = document.getElementsByTagName("input");
+
+        form.onsubmit = function (event) {
+            event.preventDefault(); // 阻止表單的預設行為
+            console.log("QQ");
+
+        }
+
+    </script>
 </body>
 
 </html>
