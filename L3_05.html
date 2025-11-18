@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsByName()</title>
+</head>
+
+<body>
+    <form action="">
+        <!-- input 的屬性 value 設定預設值 -->
+        <!-- input 的屬性 placeholder 設定提示文字 -->
+        <input type="text" name="firstName" value="Ben"> <br>
+        <input type="text" name="lastName" value="Chen">
+    </form>
+
+    <input type="text" name="firstName" value="Ben">
+
+    <script>
+        // 標準抓取元素取得欄位值的方法
+        let form = document.getElementsByTagName("form");
+        let name1 = document.getElementsByName("firstName");
+        console.log(name1);
+        console.log(name1.length);
+        console.log(name1[0].value);
+        name1[0].value = "Ken"; // 抓取資料庫上次的內容放進編輯介面
+
+        // 不需抓取的取用欄位值的方法
+        console.log(document.forms[0].firstName.value);
+
+
+    </script>
+</body>
+
+</html>
