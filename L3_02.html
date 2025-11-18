@@ -14,16 +14,23 @@
         </div>
     </div>
 
+    <button id="btn1">隱藏</button>
+
     <script>
         // let aaa = document.getElementById("aaa");
         // let bbb = document.getElementById("bbb");
         // let ccc = document.getElementById("ccc");
+        let btn1 = document.getElementById("btn1");
         // 有 id 的元素, 不需要經過抓取, 可以直接用 id 控制
 
         // 有經過抓取, 會有相對應的程式碼片段可以使用
         aaa.style.backgroundColor = "pink";
         bbb.style.color = "red";
         ccc.innerHTML = "abc";
+
+        btn1.onclick = function () {
+            aaa.style.display = "none";
+        }
 
     </script>
 </body>
