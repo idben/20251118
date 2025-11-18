@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsByTagName()</title>
+</head>
+
+<body>
+    <article>
+        <h1>TITLE</h1>
+        <h2>subtitle</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
+            alias?
+        </p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </article>
+
+    <script>
+        let articles = document.getElementsByTagName("article");
+        console.log(articles);
+        console.log(articles[0]);
+        // getElementsByTagName 支援切換來源
+        let h1s = articles[0].getElementsByTagName("h1");
+        h1s[0].innerHTML = "標題";
+
+        let ps = articles[0].getElementsByTagName("p");
+        console.log(ps);
+
+        // 第 1 個 p 30px
+        // 第 2 個 p 60px
+
+        ps[0].style.fontSize = "30px";
+        ps[1].style.fontSize = "60px";
+
+
+    </script>
+</body>
+
+</html>
