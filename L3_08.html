@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>querySelector and querySelectorAll</title>
+</head>
+
+<body>
+    <form action="">
+        <div class="row">
+            <label for="userName">name</label>
+            <input type="text" name="userName" value="Ben" />
+        </div>
+        <div class="row">
+            <label for="userEmail">email</label>
+            <input type="text" name="userEmail" value="ben@ben.com" />
+        </div>
+        <div class="row">
+            <label for="userPhone">phone</label>
+            <input type="number" name="userPhone" value="0988888888" />
+        </div>
+    </form>
+
+    <script>
+        let rows = document.querySelectorAll(".row");
+        console.log(rows);
+        let input1 = rows[0].querySelector("input");
+        console.log(input1.value);
+        let input2 = document.querySelectorAll("input")[1];
+        console.log(input2.value);
+        let input3 = document.querySelector("form .row input[name=userPhone]");
+        console.log(input3.value);
+
+
+
+
+    </script>
+</body>
+
+</html>
